@@ -1,28 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Custom Element : Custom lang select</title>
   </head>
   <body>
-    <h1>Custom Element : Custom lang select </h1>
+    <h1>Custom Element : Custom lang select</h1>
 
     <div>
-      <lang-select id="lang-select" availableLangs="en,ar,de"/>
+      <div>
+        <simple-lang-select id="lang-select" availableLangs="en,ar,de" />
+      </div>
+
+      <div>Selected Lang : <span id="selected-lang"></span></div>
     </div>
 
     <div>
-      Selected Lang : <span id="selected-lang"></span>
+      <lang-select id="lang-select1" />
+      <div>Selected Lang : <span id="selected-lang1"></span></div>
     </div>
     <script src="main.js"></script>
+    <script src="LangSelect.js"></script>
     <script type="text/javascript">
       const langSelect = document.querySelector("#lang-select");
-      langSelect.addEventListener('change', (evt) => {
-        console.log('lang select change', evt)
+      langSelect.addEventListener("change", (evt) => {
+        console.log("lang select change", evt);
         // console.log('lang select change value', evt.target.value)
         document.querySelector("#selected-lang").innerHTML = evt.value;
-        document.querySelector("#lang-select").setAttribute('value', evt.value);
-      })
+        document.querySelector("#lang-select").setAttribute("value", evt.value);
+      });
+      const langSelect1 = document.querySelector("#lang-select1");
+      langSelect1.addEventListener("change", (evt) => {
+        console.log(evt.originalTarget.value);
+        console.log("lang select 2 change", evt);
+        // console.log('lang select change value', evt.target.value)
+        document.querySelector("#selected-lang1").innerHTML = evt.value;
+        document
+          .querySelector("#lang-select1")
+          .setAttribute("value", evt.originalTarget.value);
+      });
     </script>
   </body>
 </html>

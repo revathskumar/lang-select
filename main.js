@@ -1,4 +1,4 @@
-class LangSelect extends HTMLSelectElement {
+class SimpleLangSelect extends HTMLSelectElement {
   static get observedAttributes() {
     return ["value", "availableLangs"];
   }
@@ -98,4 +98,4 @@ class LangSelect extends HTMLSelectElement {
 
 }
 
-customElements.define("lang-select", LangSelect, { extends: "select" });
+customElements.define("simple-lang-select", SimpleLangSelect, { extends: "select" });
