@@ -1,6 +1,6 @@
 {
   "name": "@revathskumar/lang-select",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "> Custom component for language select",
   "main": "dist/index.mjs",
   "type": "module",
