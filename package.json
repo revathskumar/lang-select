@@ -1,0 +1,35 @@
+{
+  "name": "@revathskumar/lang-select",
+  "version": "0.0.1",
+  "description": "> Custom component for language select",
+  "main": "dist/index.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c -m"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "custom-element",
+    "select",
+    "language",
+    "i18n"
+  ],
+  "repository": {
+    "url": "https://codeberg.org/0x52534B/lang-select"
+  },
+  "homepage": "https://codeberg.org/0x52534B/lang-select",
+  "author": {
+    "name": "Revath S Kumar",
+    "email": "rsk@revathskumar.com",
+    "url": "http://blog.revathskumar.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "rollup": "^4.20.0"
+  }
+}
